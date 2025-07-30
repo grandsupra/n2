@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://drive.usercontent.google.com/download?id=15tKRWw6t8rKSQqSEafWcyizEqmTHsqut&export=download&confirm=t&uuid=60d6f35d-f219-4441-9170-ed24d26ecde1" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri "https://gitlab.com/gusta7w7/pcrdp-avica/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
       - name: Show Website
