@@ -1,0 +1,22 @@
+name: NewAvica
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Start Building...
+    runs-on: windows-2025
+    timeout-minutes: 120
+    
+    steps:
+      - name: Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://drive.usercontent.google.com/download?id=15tKRWw6t8rKSQqSEafWcyizEqmTHsqut&export=download&confirm=t&uuid=60d6f35d-f219-4441-9170-ed24d26ecde1" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+
+      - name: Show Website
+        run: cmd /c show.bat
+
+      - name: Time Counter
+        run: cmd /c loop.bat
